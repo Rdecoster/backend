@@ -52,7 +52,7 @@ request sample
 ```
 <br /><br />
 
-## Endpoint:  (POST, GET) /users
+## Endpoint:  (POST, GET, PATCH) /users
 ### sample POST /users request
 ```
 request body value types
@@ -114,6 +114,40 @@ response sample
     "user_id": 3,
     "username": "mo",
     "email": "mo@moo.com",
+}
+```
+### sample PATCH /users/:user_id request
+```
+request body value types
+{
+    username = (String),
+    password = (String),
+    email = (String),
+    newEmail = (string),
+}
+
+request sample
+{
+    "username": "sample_user",
+    "password": "a_password1",
+    "email": "sample@email.com",
+    "newEmail": "newEmail@email.com",
+}
+
+---------------------------
+
+response body value types
+{
+    user_id = (Number),
+    username = (String),
+    trip_id = (Number)
+}
+
+response sample
+{
+    user_id: 1,
+    "username": "sample_user",
+    "trip_id": 1,
 }
 ```
 <br /><br />
